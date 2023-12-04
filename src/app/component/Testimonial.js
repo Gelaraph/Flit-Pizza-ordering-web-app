@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Leaf from "../../../public/assets/leaf.png";
-import SecondCustomer from "../../../public/assets/SecondCus.jpg";
+import SecondCustomer from "../../../public/assets/secondCus.jpg";
 import ThirdCustomer from "../../../public/assets/thirdCus.jpg";
 import FourthCustomer from "../../../public/assets/fourthCus.jpg";
 
