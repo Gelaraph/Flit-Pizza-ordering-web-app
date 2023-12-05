@@ -7,7 +7,7 @@ const page = () => {
     <>
       <Navbar />
       <div className="flex justify-center items-center flex-col h-screen">
-        <h2 className="font-bold text-3xl">Welcome to our Blog Page!</h2>
+        <h2 className="font-bold text-3xl">Welcome to our Contact Page!</h2>
       </div>
       <Footer />
     </>

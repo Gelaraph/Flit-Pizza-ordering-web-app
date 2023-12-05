@@ -50,24 +50,24 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                className={pathname === "/about" ? "active-link" : ""}
-                href="/about"
+                className={pathname === "/pages" ? "active-link" : ""}
+                href="/pages"
               >
                 PAGES
               </a>
             </li>
             <li>
               <a
-                className={pathname === "/about" ? "active-link" : ""}
-                href="/about"
+                className={pathname === "/blog" ? "active-link" : ""}
+                href="/blog"
               >
                 BLOG
               </a>
             </li>
             <li>
               <a
-                className={pathname === "/about" ? "active-link" : ""}
-                href="/about"
+                className={pathname === "/contact" ? "active-link" : ""}
+                href="/contact"
               >
                 CONTACT
               </a>
