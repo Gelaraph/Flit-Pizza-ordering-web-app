@@ -1,70 +1,41 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 
 const AdminLogin = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   return (
-    <AdminLoginStyle>
-      <div className="container">
-        <h3>Admin Dashboard</h3>
-        <form>
-          <div>
-            <input
-              type="name"
-              // value={name}
-              onChange={(e) => {
-                setName(e);
-              }}
-              placeholder="username"
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              // value={password}
-              onChange={(e) => {
-                setPassword(e);
-              }}
-              placeholder="password"
-            />
-          </div>
-          <button>Sign In</button>
-        </form>
-      </div>
-    </AdminLoginStyle>
+    <div className="flex flex-col gap-6 items-center justify-center min-h-screen w-full ">
+      <h3 className="font-bold text-xl">Admin Dashboard</h3>
+      <form className=" flex flex-col gap-6 w-1/3 my-0 mx-auto justify-center ">
+        <div className="flex flex-col justify-center">
+          <input
+            type="name"
+            // value={name}
+            onChange={(e) => {
+              setName(e);
+            }}
+            className="border p-3"
+            placeholder="username"
+          />
+        </div>
+        <div className="flex flex-col justify-center">
+          <input
+            type="password"
+            // value={password}
+            onChange={(e) => {
+              setPassword(e);
+            }}
+            className="border p-3"
+            placeholder="password"
+          />
+        </div>
+        <button className="bg-[#008080] text-white py-3">Sign In</button>
+        <div className="text-center">
+          <p className="text-[#FF3000] text-sm">Wrong Credentials!</p>
+        </div>
+      </form>
+    </div>
   );
 };
 
-const AdminLoginStyle = styled.div`
-  height: 80vh;
-  align-items: center;
-  display: grid;
-  justify-content: center;
-  text-align: center;
-
-  h3 {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  form {
-    width: 100%;
-    > div {
-      margin-top: 1.2em;
-    }
-    input {
-      border: 1px solid grey;
-      padding: 0.5em;
-      width: 100%;
-    }
-    button {
-      background-color: rgb(52, 155, 100);
-      color: #fff;
-      width: 100%;
-      padding: 0.6em;
-      margin-top: 1em;
-    }
-  }
-`;
 export default AdminLogin;

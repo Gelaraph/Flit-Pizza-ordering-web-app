@@ -5,14 +5,14 @@ import Image from "next/image";
 import Burger from "../../../../public/assets/burger.jpg";
 import Sizes from "../../../../public/assets/pizza-size.png";
 import SizeBatch from "@/app/component/SizeBatch";
-import Button from "@/app/component/Button";
 import { FaRegHeart } from "react-icons/fa6";
 
 const ProductDetails = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-between gap-5 px-5 items-center mt-28 ">
+
+      <div className="flex justify-between gap-5 px-5 items-center mt-56">
         <div className="flex w-1/2">
           <Image src={Burger} alt="" width={500} height={400} className="" />
         </div>

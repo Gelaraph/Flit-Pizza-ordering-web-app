@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import styled from "styled-components";
 import HeroImage from "../../../public/assets/hero-img.png";
 import HeroOnionImage from "../../../public/assets/pizza-onion.png";
 import HerobottomPizza from "../../../public/assets/hero-pizza.png";
@@ -29,7 +28,9 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <Button className="hero-btn" text="ORDER NOW" />
+          <a href="/products">
+            <Button className="hero-btn" text="ORDER NOW" />
+          </a>
         </div>
         <div className="hero-image-cont">
           <div

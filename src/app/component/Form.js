@@ -3,7 +3,7 @@ import React from "react";
 const Form = ({ closeModal }) => {
   return (
     <div class="w-full text-start">
-      <h2 className="font-bold text-4xl mt-2">
+      <h2 className="font-bold text-2xl mt-2">
         You will pay $54 on <br /> delivery.
       </h2>
       <form class="x-8 pt-6">
@@ -52,13 +52,15 @@ const Form = ({ closeModal }) => {
           <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-36" />
         </div>
         <div className=" px-4 py-3 sm:flex justify-center sm:px-6 w-full">
-          <button
-            type="button"
-            className="inline-flex w-full justify-center border-black rounded-md bg-[#FFAC07] px-3 py-2 text-sm font-semibold text-black border-2 hover:bg-red-500 sm:ml-3 sm:w-auto mb-4"
-            onClick={closeModal}
-          >
-            Order
-          </button>
+          <a href="/order">
+            <button
+              type="button"
+              className="inline-flex w-full justify-center border-black rounded-md bg-[#FFAC07] px-3 py-2 text-sm font-semibold text-black border-2 hover:bg-red-500 sm:ml-3 sm:w-auto mb-4"
+              onClick={closeModal}
+            >
+              Order
+            </button>
+          </a>
         </div>
       </form>
     </div>

@@ -4,6 +4,7 @@ import Leaf from "../../../public/assets/leaf.png";
 import SecondCustomer from "../../../public/assets/secondCus.jpg";
 import ThirdCustomer from "../../../public/assets/thirdCus.jpg";
 import FourthCustomer from "../../../public/assets/fourthCus.jpg";
+import FirstCustomer from "../../../public/assets/firstCus.png";
 
 const Testimonial = () => {
   return (
@@ -21,7 +22,7 @@ const Testimonial = () => {
         <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors w-full flex justify-center flex-col border-gray-300">
           <div className="w-full flex justify-center">
             <Image
-              src={SecondCustomer}
+              src={FirstCustomer}
               alt=""
               width={100}
               height={100}
@@ -29,6 +30,27 @@ const Testimonial = () => {
             />
           </div>
 
+          <div className="text-center">
+            <h2 className={`mb-3 text-lg font-semibold mt-2`}>
+              All Kinds Of Food
+            </h2>
+            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+              Lorem Ipsum is simply dummy text of the print book. It has
+              survived not only five centuries, but also a leap.
+            </p>
+          </div>
+        </div>
+
+        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors w-full flex justify-center flex-col border-gray-300">
+          <div className="w-full flex justify-center">
+            <Image
+              src={SecondCustomer}
+              alt=""
+              width={100}
+              height={100}
+              className="rounded-full"
+            />
+          </div>
           <div className="text-center">
             <h2 className={`mb-3 text-lg font-semibold mt-2`}>
               All Kinds Of Food
@@ -44,27 +66,6 @@ const Testimonial = () => {
           <div className="w-full flex justify-center">
             <Image
               src={ThirdCustomer}
-              alt=""
-              width={100}
-              height={100}
-              className="rounded-full"
-            />
-          </div>
-          <div className="text-center">
-            <h2 className={`mb-3 text-lg font-semibold mt-2`}>
-              All Kinds Of Food
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Lorem Ipsum is simply dummy text of the print book. It has
-              survived not only five centuries, but also a leap.
-            </p>
-          </div>
-        </div>
-
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors w-full flex justify-center flex-col border-gray-300">
-          <div className="w-full flex justify-center">
-            <Image
-              src={SecondCustomer}
               alt=""
               width={100}
               height={100}
