@@ -4,7 +4,7 @@ import { CiMenuBurger } from "react-icons/ci";
 import { usePathname } from "next/navigation";
 import { CiSearch } from "react-icons/ci";
 import { IoCartSharp } from "react-icons/io5";
-import LogoImage from "../../../public/assets/pizza-logo.png";
+import LogoImage from "../../../../public/assets/pizza-logo.png";
 import Image from "next/image";
 import "./nav.css";
 
@@ -22,7 +22,7 @@ const Navbar = () => {
       <div
         className="container fixed top-0 z-10 max-w-full min-w-full mx-auto px-5 flex justify-between items-center pt-3 pb-1.5 bg-white h-100"
         style={{
-          backgroundImage: "url('/assets/pizza-header-img.png')",
+          backgroundImage: "url('../assets/pizza-header-img.png')",
           backgroundPosition: "13em -1.5em",
           backgroundRepeat: "no-repeat",
         }}

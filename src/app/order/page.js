@@ -6,8 +6,8 @@ import Bake from "../../../public/assets/bake.png";
 import Bike from "../../../public/assets/bike.png";
 import Delivered from "../../../public/assets/delivered.png";
 import { FaCheck } from "react-icons/fa6";
-import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
+import Navbar from "../component/navbar/Navbar";
 
 const Page = () => {
   const [isVisible, setIsVisible] = useState(true);

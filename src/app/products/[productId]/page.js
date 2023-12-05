@@ -1,5 +1,5 @@
 import Footer from "@/app/component/Footer";
-import Navbar from "@/app/component/Navbar";
+import Navbar from "@/app/component/navbar/Navbar";
 import React from "react";
 import Image from "next/image";
 import Burger from "../../../../public/assets/burger.jpg";

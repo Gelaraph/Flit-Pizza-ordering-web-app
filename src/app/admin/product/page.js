@@ -3,7 +3,7 @@ import { useState } from "react";
 import AddProduct from "@/app/component/AddProduct";
 import Filter from "@/app/component/Filter";
 import Footer from "@/app/component/Footer";
-import Navbar from "@/app/component/Navbar";
+import Navbar from "@/app/component/navbar/Navbar";
 import ProductCard from "@/app/component/ProductCard";
 
 const Page = () => {

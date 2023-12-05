@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import Navbar from "../component/Navbar";
+import Navbar from "../component/navbar/Navbar";
 import Footer from "../component/Footer";
 import Pizza from "../../../public/assets/hero-img.png";
 import GreekPizza from "../../../public/assets/hero-pizza.png";
