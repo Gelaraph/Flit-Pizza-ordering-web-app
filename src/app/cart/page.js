@@ -13,6 +13,7 @@ const Cart = () => {
 
   const showCashPaymentModal = () => {
     setCashModal(!cashModal);
+    console.log("first");
   };
 
   const toggleCheckoutBtn = () => {
@@ -121,7 +122,7 @@ const Cart = () => {
         </div>
       </div>
 
-      {cashModal && <PaymentModal onClose={showCashPaymentModal} />}
+      {cashModal && <PaymentModal closeModal={showCashPaymentModal} />}
       <Footer />
     </>
   );
