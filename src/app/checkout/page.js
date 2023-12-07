@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import Paid from "../../../public/assets/paid.png";
 import Bake from "../../../public/assets/bake.png";
@@ -8,43 +8,69 @@ import Delivered from "../../../public/assets/delivered.png";
 import { FaCheck } from "react-icons/fa6";
 import Footer from "../component/Footer";
 import Navbar from "../component/navbar/Navbar";
+import { FormContext } from "@/formContext/FormContext";
 
 const Page = () => {
+  const { user } = useContext(FormContext);
+
+  const [orderId, setOrderId] = useState("");
+
+  // useEffect to generate the Order ID once when the component mounts
+  useEffect(() => {
+    setOrderId(generateOrderId());
+  }, []);
+
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsVisible(!isVisible);
-    }, 1000); // Adjust the delay (in milliseconds) as needed
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, [isVisible]);
 
   const imageStyle = {
     opacity: isVisible ? 1 : 0,
-    transition: "opacity 1s ease-in-out", // Adjust the duration and timing function as needed
+    transition: "opacity 1s ease-in-out",
   };
+
+  const generateOrderId = (length = 32) => {
+    const characters = "abcdefghijklmnopqrstuvwxyz1234567890";
+    let orderId = "";
+
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      orderId += characters.charAt(randomIndex);
+    }
+
+    return orderId;
+  };
+
   return (
     <div>
       <Navbar />
       <div className="flex gap-2 mt-64 mb-24 pr-10 ">
         <div className="w-full  ml-5 ">
-          <div class="w-full mb-12 xl:mb-0 mx-auto">
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 ">
-              <div class="block w-full overflow-x-auto">
-                <table class="items-center bg-transparent w-full border-collapse ">
+          <div className="w-full mb-12 xl:mb-0 mx-auto">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 ">
+              <div className="block w-full overflow-x-auto">
+                <table className="items-center bg-transparent w-full border-collapse ">
                   <thead>
                     <tr>
-                      <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">
+                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">
                         Order ID
                       </th>
-                      <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">
+                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">
                         Customer
                       </th>
-                      <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">
+                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">
+                        Phone
+                      </th>
+                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">
                         Address
                       </th>
-                      <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">
+                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle  py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">
                         Total
                       </th>
                     </tr>
@@ -52,17 +78,20 @@ const Page = () => {
 
                   <tbody>
                     <tr className="border border-solid border-blueGray-100 border-l-0 border-r-0 ">
-                      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                        tygfyhtftrxdgrex5r65678643fgv
+                      <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                        {orderId}
                       </td>
-                      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                      <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                        {user.name}
+                      </td>
+                      <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
                         09876543456
                       </td>
-                      <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                        10 John Street
+                      <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        {user.address}
                       </td>
 
-                      <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                      <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
                         $4540
                       </td>
                     </tr>
