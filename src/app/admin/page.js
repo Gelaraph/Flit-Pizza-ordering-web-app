@@ -87,11 +87,11 @@ export default function Page() {
     <div>
       <Navbar />
       <div className="mt-40 p-4">
-        <div>
-          <h3 className="font-bold mb-4 text-lg px-5">Products</h3>
-        </div>
         <div className="flex flex-col lg:flex-row items-start mx-auto  mb-20  gap-4">
           <div className="lg:w-1/2 w-full mb-10">
+            <div>
+              <h3 className="font-bold mb-4 text-lg px-5">Products</h3>
+            </div>
             <div className="px-5">
               <table className="w-[100%] table-auto border-collapse border-b border-gray-300">
                 <thead>
@@ -145,6 +145,9 @@ export default function Page() {
           </div>
 
           <div className="lg:w-1/2 w-full mb-10">
+            <div>
+              <h3 className="font-bold mb-4 text-lg px-5">Orders</h3>
+            </div>
             <div className="px-5">
               <table className="w-[100%] table-auto border-collapse border-b border-gray-300">
                 <thead>

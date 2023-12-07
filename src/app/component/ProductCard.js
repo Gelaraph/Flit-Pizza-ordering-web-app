@@ -14,9 +14,9 @@ const ProductCard = () => {
   return (
     <div className="mb-32 grid text-center  lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left mt-10">
       {productArray.map((product, index) => (
-        <Link
+        <div
           key={index}
-          href={`/products/${product.id}`}
+          // href={`/products/${product.id}`}
           className="group rounded-lg border px-5 py-4 transition-colors border-gray-30 dark:border-neutral-700  mx-5"
         >
           <div className="w-full flex justify-center h-2/3">
@@ -40,9 +40,11 @@ const ProductCard = () => {
             This is burger pizza
           </p>
           <div className="mb-5">
-            <Button className="btn" text="ORDER NOW" />
+            <Link key={index} href={`/products/${product.id}`} className="">
+              <Button className="btn" text="ORDER NOW" />
+            </Link>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
